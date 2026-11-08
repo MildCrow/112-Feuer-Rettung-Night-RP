@@ -1,0 +1,247 @@
+<title>Feuer & Rettung Hamburg</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#oben" id="oben">
+      <span class="brand-mark">112</span>
+      <span class="brand-name">Feuer &amp; Rettung Hamburg</span>
+    </a>
+    <nav aria-label="Hauptmenü">
+      <a href="#einheiten">Einheiten</a>
+      <a href="#raenge">Ränge</a>
+      <a href="#regeln">Regeln</a>
+      <a href="#bewerbung">Bewerbung</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1><span class="ln">Wir</span><span class="ln">rücken</span><span class="ln red">aus.</span></h1>
+        <p class="lead">Der Discord für Feuerwehr, Notarzt und Rettungsdienst in Notruf Hamburg. Zusammen fahren, Einsätze abarbeiten und danach in Ruhe besprechen, was gut lief.</p>
+        <div class="cta-row">
+          <a class="btn" id="join" href="#bewerbung">Discord beitreten</a>
+          <a class="btn ghost" href="#bewerbung">Bewerben</a>
+        </div>
+        <p class="hint" id="join-hint" style="margin-top:12px" hidden>Der Einladungslink wird vom Server-Team eingetragen.</p>
+      </div>
+
+      <aside class="board" id="board" aria-label="Beispiel einer Einsatzmeldung">
+        <div class="lightbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="board-head">
+          <span class="live"><i></i>Einsatz läuft</span>
+          <span>Leitstelle Hamburg</span>
+        </div>
+        <dl>
+          <dt>Stichwort</dt>
+          <dd class="big" id="b-key">Brand 2, Wohnungsbrand</dd>
+          <dt>Einsatzort</dt>
+          <dd id="b-loc">Hafencity, Hamburg</dd>
+          <dt>Alarmiert</dt>
+          <dd>
+            <ul class="fleet" id="b-fleet">
+              <li class="f"><b>Florian Hamburg 1/43-1</b><em>HLF</em></li>
+              <li class="f"><b>Florian Hamburg 1/24-1</b><em>DLK</em></li>
+              <li class="r"><b>Rettung 4/83-1</b><em>RTW</em></li>
+              <li class="r"><b>Notarzt 1/82-1</b><em>NEF</em></li>
+            </ul>
+          </dd>
+          <dt>Status</dt>
+          <dd><span class="status s-on" id="b-status">Einsatzstelle erreicht</span><span class="time" id="b-time">04:12</span></dd>
+          <dt>Funk</dt>
+          <dd id="b-radio">Florian 1 an Leitstelle, Einsatzstelle erreicht, Menschenrettung läuft.</dd>
+        </dl>
+        <p class="board-foot">Beispielmeldung aus dem Rollenspiel. Die Kennungen sind Beispiele.</p>
+      </aside>
+    </div>
+
+    <section id="einheiten">
+      <h2>Drei Einheiten, ein Einsatz</h2>
+      <p class="lead">Bei uns arbeiten Löschzug, Rettungswagen und Notarzt zusammen. Wer im Einsatz mitfährt, sucht sich eine Einheit aus und kann später wechseln.</p>
+      <div class="cols">
+        <article class="unit fw">
+          <div class="uhead"><span class="chip" aria-hidden="true"><svg class="flame" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-10z" fill="#FF5A4D"/><path d="M12 22a3 3 0 0 1-3-3c0-2 2-3 3-5 1 2 3 3 3 5a3 3 0 0 1-3 3z" fill="#F2C200"/></svg></span><h3>Feuerwehr</h3></div>
+          <p>Löschen, retten, bergen, sichern. Die Wache stellt Löschzüge und Einsatzleiter.</p>
+          <ul>
+            <li>Brände und Unfälle mit eingeklemmten Personen</li>
+            <li>Technische Hilfe und Absicherung der Einsatzstelle</li>
+            <li>Löschzug, Drehleiter und Rüstwagen</li>
+          </ul>
+          <p class="call mono">Funkruf: <b>Florian Hamburg</b></p>
+        </article>
+        <article class="unit rd">
+          <div class="uhead"><span class="chip" aria-hidden="true"><svg class="cross" viewBox="0 0 24 24" width="26" height="26"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z" fill="#F2C200"/></svg></span><h3>Rettungsdienst</h3></div>
+          <p>Erste Hilfe am Patienten und sicherer Transport ins Krankenhaus.</p>
+          <ul>
+            <li>Notfallversorgung mit dem Rettungswagen (RTW)</li>
+            <li>Krankentransport und Betreuung an Einsatzstellen</li>
+            <li>Übergabe an Klinik und Notarzt</li>
+          </ul>
+          <p class="call mono">Funkruf: <b>Rettung</b></p>
+        </article>
+        <article class="unit">
+          <div class="uhead"><span class="chip" aria-hidden="true"><svg class="ekg" viewBox="0 0 32 24" width="34" height="26"><polyline points="1,13 8,13 11,5 15,21 18,9 21,13 31,13" pathLength="100" fill="none" stroke="#4CC38A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3>Notarzt</h3></div>
+          <p>Ärztliche Versorgung bei schweren Notfällen, angefahren mit dem Notarzteinsatzfahrzeug (NEF).</p>
+          <ul>
+            <li>Reanimation und schwere Verletzungen</li>
+            <li>Ärztliche Leitung am Patienten</li>
+            <li>Ausbildung und Freigabe vor dem ersten Einsatz</li>
+          </ul>
+          <p class="call mono">Funkruf: <b>Notarzt</b></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="raenge">
+      <h2>Rangleiter</h2>
+      <p class="lead">Wer aktiv ist, sich an die Regeln hält und Lehrgänge besucht, steigt auf. Die Reihenfolge gilt von oben nach unten.</p>
+      <div class="ranks">
+        <div>
+          <p class="rank-title">Feuerwehr</p>
+          <ol class="ladder fw">
+            <li class="head"><strong>Wachleiter / Einsatzleiter</strong><span>Führt die Wache und leitet größere Einsätze.</span></li>
+            <li><strong>Oberbrandmeister</strong><span>Führt eine Löschgruppe und bildet aus.</span></li>
+            <li><strong>Brandmeister</strong><span>Führt ein Fahrzeug und seine Besatzung.</span></li>
+            <li><strong>Feuerwehrmann / Feuerwehrfrau</strong><span>Vollwertiger Einsatzdienst.</span></li>
+            <li><strong>Probefeuerwehrmann / -frau</strong><span>Probezeit, Einsätze unter Aufsicht.</span></li>
+          </ol>
+        </div>
+        <div>
+          <p class="rank-title">Rettungsdienst und Notarzt</p>
+          <ol class="ladder rd">
+            <li class="head"><strong>Wachleiter / Einsatzleiter</strong><span>Führt die Wache und koordiniert den Rettungsdienst.</span></li>
+            <li><strong>Notarzt</strong><span>Ärztliche Leitung am Patienten, fährt das NEF.</span></li>
+            <li><strong>Notfallsanitäter</strong><span>Führt den RTW und entscheidet über die Versorgung.</span></li>
+            <li><strong>Rettungssanitäter</strong><span>Besatzung des RTW.</span></li>
+            <li><strong>Rettungshelfer</strong><span>Einstieg, Einsätze unter Aufsicht.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="regeln">
+      <h2>Regeln im Überblick</h2>
+      <p class="lead">Das ist die Kurzfassung. Die vollständigen Regeln stehen im Discord im Kanal #regeln.</p>
+      <div class="rules">
+        <details open>
+          <summary>Allgemein</summary>
+          <ul>
+            <li>Respektvoller Umgang. Beleidigungen, Mobbing, Hetze und Diskriminierung sind verboten.</li>
+            <li>Die Discord-Nutzungsbedingungen und die Roblox-Regeln gelten zusätzlich.</li>
+            <li>Kein Spam, keine Fremdwerbung, keine NSFW- oder illegalen Inhalte.</li>
+            <li>Private Daten, auch eigene, bleiben privat.</li>
+            <li>Anweisungen des Teams werden befolgt. Kritik gehört in ein Ticket, nicht in den Chat.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Roleplay</summary>
+          <ul>
+            <li>Realistisch spielen. Kein Fail-RP, kein Troll-RP, kein sinnloses Rasen.</li>
+            <li>Kein Meta-Gaming: Dein Charakter weiß nur, was er im Spiel erfahren hat.</li>
+            <li>Kein Power-Gaming: Du erzwingst keine Handlungen bei anderen.</li>
+            <li>Kein RDM und kein VDM.</li>
+            <li>Nutze nur Fahrzeuge und Ausrüstung, die zu deinem Rang gehören.</li>
+            <li>Nimm Notfälle ernst und melde dich bei der Leitstelle ab, wenn du einen Einsatz verlässt.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Funk und Voice</summary>
+          <ul>
+            <li>Kurz, klar und sachlich funken. Dringende Meldungen haben Vorrang.</li>
+            <li>Nutze Funkrufname oder Einheit, zum Beispiel Florian Hamburg 1 oder Rettung 2.</li>
+            <li>Keine Musik, kein Soundboard, kein Stimmverzerrer in den Einsatzkanälen.</li>
+            <li>Aufnahmen nur mit Zustimmung aller Beteiligten.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Ränge und Einsatzleitung</summary>
+          <ul>
+            <li>Beförderungen richten sich nach Aktivität, Verhalten und Leistung.</li>
+            <li>Für bestimmte Fahrzeuge und Rollen, etwa Notarzt, ist ein Lehrgang Pflicht.</li>
+            <li>Wer länger nicht aktiv ist, meldet sich ab. Sonst kann der Rang entfallen.</li>
+            <li>Anweisungen der Einsatzleitung gelten im Einsatz. Diskutiert wird danach in der Nachbesprechung.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="sanctions">
+        <table>
+          <thead><tr><th>Verstoß</th><th>Mögliche Folge</th></tr></thead>
+          <tbody>
+            <tr><td>Leicht, zum Beispiel Spam oder falscher Kanal</td><td>Verwarnung</td></tr>
+            <tr><td>Wiederholt oder mittel, zum Beispiel Fail-RP oder Meta-Gaming</td><td>Mute oder Rangentzug auf Zeit</td></tr>
+            <tr><td>Schwer, zum Beispiel Beleidigung oder absichtliches Power-Gaming</td><td>Degradierung, Timeout oder Kick</td></tr>
+            <tr><td>Sehr schwer, zum Beispiel Drohungen oder illegale Inhalte</td><td>Permanenter Bann</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="bewerbung">
+      <h2>Bewerbung</h2>
+      <div class="apply">
+        <div>
+          <p class="lead" style="margin-top:0">Fülle das Formular aus und kopiere den fertigen Text in ein Ticket im Kanal #bewerbung. Das Team meldet sich danach bei dir.</p>
+          <ul class="req">
+            <li>Roblox-Account mit Notruf Hamburg</li>
+            <li>Discord-Account auf unserem Server</li>
+            <li>Funktionierendes Mikrofon</li>
+            <li>Regeln gelesen und akzeptiert</li>
+            <li>Bereitschaft, Lehrgänge zu besuchen</li>
+          </ul>
+          <p style="margin-top:20px">
+            <a class="btn ghost" id="join2" href="#bewerbung">Discord beitreten</a>
+          </p>
+        </div>
+
+        <form id="apply-form" novalidate>
+          <label for="f-unit">Wunscheinheit
+            <select id="f-unit">
+              <option>Feuerwehr</option>
+              <option>Rettungsdienst</option>
+              <option>Notarzt</option>
+            </select>
+          </label>
+          <label for="f-roblox">Roblox-Name
+            <input id="f-roblox" type="text" autocomplete="off">
+          </label>
+          <label for="f-discord">Discord-Name
+            <input id="f-discord" type="text" autocomplete="off">
+          </label>
+          <label for="f-exp">Erfahrung im Roleplay
+            <textarea id="f-exp" placeholder="Zum Beispiel: Wie lange spielst du schon und in welchen Einheiten?"></textarea>
+          </label>
+          <label for="f-time">Wann bist du meistens online?
+            <input id="f-time" type="text" placeholder="Zum Beispiel: abends und am Wochenende">
+          </label>
+          <label for="f-why">Warum möchtest du dabei sein?
+            <textarea id="f-why"></textarea>
+          </label>
+          <label class="check" for="f-rules">
+            <input id="f-rules" type="checkbox">
+            <span>Ich habe die Regeln gelesen und akzeptiere sie.</span>
+          </label>
+          <p class="err" id="f-err" role="alert"></p>
+          <button class="btn" type="submit">Bewerbungstext erstellen</button>
+
+          <div class="out" id="out" hidden>
+            <pre id="out-text"></pre>
+            <button class="btn ghost" type="button" id="copy">Text kopieren</button>
+            <p class="hint" id="copy-msg" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dies ist ein Community-Projekt für Rollenspiel in Roblox. Es ist nicht mit Notruf Hamburg, Roblox oder echten Behörden verbunden.</p>
+    <p>Im echten Notfall gilt die Notrufnummer 112.</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
