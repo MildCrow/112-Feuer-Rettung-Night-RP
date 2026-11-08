@@ -1,6 +1,6 @@
 (function () {
   // Hier den Discord-Einladungslink eintragen, zum Beispiel "https://discord.gg/abcdef"
-  var DISCORD_INVITE = "";
+  var DISCORD_INVITE = "https://discord.gg/5kqAzx7kYK";
 
   var joinLinks = [document.getElementById("join"), document.getElementById("join2")];
   var hint = document.getElementById("join-hint");
